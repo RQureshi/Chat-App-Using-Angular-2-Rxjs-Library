@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-start mb-4">
+  <div  class="img_cont_msg"
+       *ngIf="!incoming">
+    <img src="{{message.author.avatarSrc}}" class="rounded-circle user_img_msg">
+  </div>
+<!-- </div>
+<div class="d-flex justify-content-start mb-4"> -->
+  <div class="img_cont_msg"
+       *ngIf="incoming">
+    <img src="{{message.author.avatarSrc}}" class="rounded-circle user_img_msg">
+  </div>
+  <div [ngClass]="{'msg_cotainer': !incoming, 'msg_cotainer_send': incoming}">
+      {{message.text}}
+      <span [ngClass]="{'msg_time': !incoming, 'msg_time_send': incoming}">
+        {{message.sender}} • {{message.sentAt | fromNow}}
+      </span>
+    </div>
+</div>
+

@@ -1,0 +1,18 @@
+
+<div class="d-flex bd-highlight">
+  <div class="img_cont">
+    <img class="rounded-circle user_img pointerCursor"
+   src="{{thread.avatarSrc}}" (click)="clicked($event)">
+   <span *ngIf="selected" [ngClass]="{'online_icon  offline': !selected, 'online_icon': selected}">&bull;</span>
+  </div>
+  <div class="user_info">
+    <!-- <h5 class="media-heading contact-name">{{thread.name}}
+    </h5>
+    <small class="message-preview">{{thread.lastMessage.text}}</small>
+  </div> -->
+  <span >{{thread.name}}
+  </span>
+    <p >{{thread.lastMessage.text}}</p>
+  </div>
+  <!-- <a (click)="clicked($event)" >Se</a> -->
+</div>
